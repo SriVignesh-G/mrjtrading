@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRJ Trading</title>
+    <link rel="icon" href="../static/mrjicon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body  style="background-color:black;">
+    <!-- header -->
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="../static/bg.png" alt="icon" width="80px" height="60px">
+            <span class="fs-3 fw-bold text-warning">MRJ <span class="fs-3 fw-bold text-white">Trading</span></span>
+          </a>
+    
+          <ul class="nav nav-pills py-3">
+            <li class="nav-item"><a href="{% url 'index' %}" class="btn fw-bold text-white fs-5" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="{% url 'course' %}" class="btn fw-bold text-white fs-5">Course</a></li>
+            <li class="nav-item"><a href="{% url 'signup_login' %}" class="btn fw-bold text-white fs-5">Charts</a></li>
+            <li class="nav-item"><a href="{% url 'about' %}" class="btn fw-bold text-white fs-5">About</a></li>
+            <li class="nav-item"><a href="{% url 'signup_login' %}" class="btn btn-warning fs-5">Login</a></li>
+          </ul>
+        </header>
+      </div>
+    
+      
+       
+    <!-- hero -->
+
+    <div class="bg-gradient me-md-3 pt-3 px-3 text-light text-center">
+        <span class="d-flex justify-content-start"><a href="{% url 'chart' user %}" class="btn btn-outline-light"><</a></span>
+        <div class="my-3 p-3">
+          <h2 class="display-5">{{blog.title}}</h2>
+          <p class="lead">{{blog.description}}</p>
+          <small class="text-center">{{blog.timeframe}}</small>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <img class="d-flex img-fluid rounded-5 border" src="{{blog.image.url}}" alt="image">
+        </div>
+      </div>
+</body>
+</html>
